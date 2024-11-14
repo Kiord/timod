@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="timod", 
-    version="0.0.2",
+    version="0.0.3",
     author="Kiord",
     author_email="glenn.kerbiriou@gmail.com",
     description="A PyTorch module wrapper for Taichi kernels",

@@ -16,7 +16,7 @@ setup(
         "Source": "https://github.com/Kiord/timod",
         "Tracker": "https://github.com/Kiord/timod/issues",
     },
-    packages=find_packages(),
+    packages=find_packages(include=['timod']),
     install_requires=[
         "torch>=2.0",
         "taichi>=1.6"

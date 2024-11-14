@@ -1,9 +1,11 @@
 # setup.py
 from setuptools import setup, find_packages
 
+from timod import __version__
+
 setup(
     name="timod", 
-    version="0.0.4",
+    version=__version__,
     author="Kiord",
     author_email="glenn.kerbiriou@gmail.com",
     description="A PyTorch module wrapper for Taichi kernels",

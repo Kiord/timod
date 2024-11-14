@@ -11,8 +11,8 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/Kiord/timod",
     project_urls={
-        "Source": "https://github.com/username/repository-name",
-        "Tracker": "https://github.com/username/repository-name/issues",
+        "Source": "https://github.com/Kiord/timod",
+        "Tracker": "https://github.com/Kiord/timod/issues",
     },
     packages=find_packages(),
     install_requires=[

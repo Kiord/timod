@@ -32,10 +32,11 @@ jobs:
         id: extract_version
         run: |
           VERSION=$(python -c "from timod import __version__; print(__version__)")
-          echo "VERSION=$VERSION" >> $GITHUB_ENV  # Store version in environment variable
+          echo "VERSION=${VERSION}" >> $GITHUB_ENV  # Store version correctly in environment variable
 
       - name: Show version
         run: echo "The version is $VERSION"
+
 
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@v1.12.2

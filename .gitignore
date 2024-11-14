@@ -1,0 +1,4 @@
+dist/*
+timod.egg-info
+*.pyc
+build/*

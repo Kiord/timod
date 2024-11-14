@@ -21,18 +21,18 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install setuptools wheel twine  # Install necessary build and upload tools
+          pip install setuptools wheel twine
           pip install -r requirements.txt
 
       - name: Build the distribution
         run: |
-          python setup.py sdist bdist_wheel  # Create distribution files
+          python setup.py sdist bdist_wheel 
 
       - name: Extract version from __init__.py
         id: extract_version
         run: |
-          VERSION=$(python -c "from timod import __version__; print(__version__)")
-          echo "VERSION=${VERSION}" >> $GITHUB_ENV  # Store version correctly in environment variable
+          VERSION=$(python -c "import timod; print(timod.__version__.strip())")
+          echo "VERSION=${VERSION}" >> $GITHUB_ENV  
 
       - name: Show version
         run: echo "The version is $VERSION"

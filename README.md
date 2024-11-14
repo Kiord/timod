@@ -44,3 +44,7 @@ in2 -= lr * in2.grad
 
 ```
 
+## How it works
+
+`timod` assumes that each kernel argument is ether an input tensor, an output tensor or a input scalar.
+The kernel signature is parsed together with the `ouput_specs` and a IO mapping is built such that the arguments provided to `TaichiKernelModule.forward` are reunited with the output tensors (which are created on the fly) and reordered to match the kernel signature. In the backward pass, the gradients are passed accordingly.

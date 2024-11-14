@@ -9,7 +9,11 @@ setup(
     description="A PyTorch module wrapper for Taichi kernels",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/Kiord/timod", 
+    url="https://github.com/Kiord/timod",
+    project_urls={
+        "Source": "https://github.com/username/repository-name",
+        "Tracker": "https://github.com/username/repository-name/issues",
+    },
     packages=find_packages(),
     install_requires=[
         "torch>=2.0",

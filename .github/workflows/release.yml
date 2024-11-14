@@ -33,7 +33,7 @@ jobs:
         run: echo "The version is $VERSION"
 
       - name: Publish to PyPI
-        uses: pypa/gh-action-pypi-publish@v2
+        uses: pypa/gh-action-pypi-publish@v1
         with:
           password: ${{ secrets.PYPI_API_TOKEN }}
         env:

@@ -32,9 +32,10 @@ jobs:
         id: extract_version
         run: |
           # Ensure timod is imported successfully and extract version
-          VERSION=$(python -c "import timod; print(timod.__version__.strip())")
+          VERSION=$(python -c "import timod; print(timod.__version__)")
+          VERSION=$(echo "$VERSION" | tail -n 1)  
           echo "Extracted VERSION: $VERSION"  # Debugging output
-          echo "VERSION=${VERSION}" >> $GITHUB_ENV  # Store version for later steps
+          echo "VERSION=${VERSION}" >> $GITHUB_ENV 
 
       - name: Show version
         run: echo "The version is $VERSION"
